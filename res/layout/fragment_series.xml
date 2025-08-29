@@ -1,17 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    android:orientation="vertical"
-    android:id="@id/rl_series"
+<ScrollView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/netsney_black"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.digitalproshare.filmapp.tools.AutofitRecyclerView
-        android:id="@id/rv_series"
+    
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:columnWidth="100.0dip" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <!-- Featured Series Section -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="280dp"
+            android:background="@color/netsney_black">
+            
+            <ImageView
+                android:id="@+id/iv_featured_series"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:alpha="0.6" />
+            
+            <TextView
+                android:id="@+id/tv_featured_series_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="TRENDING SERIES"
+                android:textColor="@color/netsney_white"
+                android:textSize="28sp"
+                android:textStyle="bold"
+                android:shadowColor="@color/netsney_black"
+                android:shadowRadius="8" />
+                
+        </RelativeLayout>
+        
+        <!-- Carousel Sections Container -->
+        <LinearLayout
+            android:id="@+id/ll_series_carousels"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp" />
+        
+        <!-- Original RecyclerView (hidden by default) -->
+        <com.digitalproshare.filmapp.tools.AutofitRecyclerView
+            android:id="@id/rv_series"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:columnWidth="100.0dip" />
     <TextView
-        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:textColor="@color/netsney_white"
         android:id="@id/tv_cargando_series"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -19,7 +61,7 @@
         android:layout_centerInParent="true" />
     <TextView
         android:textStyle="bold"
-        android:textColor="#ff656565"
+        android:textColor="@color/netsney_dark_gray"
         android:gravity="center"
         android:id="@id/tv_agregar_series"
         android:layout_width="fill_parent"

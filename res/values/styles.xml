@@ -194,29 +194,29 @@
         <item name="android:text">·</item>
     </style>
     <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
-        <item name="colorAccent">@color/neon_red</item>
-        <item name="colorPrimary">@color/neon_blue</item>
-        <item name="colorPrimaryDark">@color/futuristic_black</item>
-        <item name="android:windowBackground">@color/futuristic_black</item>
-        <item name="android:statusBarColor">@color/futuristic_black</item>
-        <item name="android:navigationBarColor">@color/futuristic_black</item>
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="android:textColorSecondary">@color/neon_blue</item>
+        <item name="colorAccent">@color/netsney_red</item>
+        <item name="colorPrimary">@color/netsney_black</item>
+        <item name="colorPrimaryDark">@color/netsney_black</item>
+        <item name="android:windowBackground">@color/netsney_black</item>
+        <item name="android:statusBarColor">@color/netsney_black</item>
+        <item name="android:navigationBarColor">@color/netsney_black</item>
+        <item name="android:textColorPrimary">@color/netsney_white</item>
+        <item name="android:textColorSecondary">@color/netsney_red</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
-        <item name="android:colorBackground">@color/futuristic_black</item>
+        <item name="android:colorBackground">@color/netsney_black</item>
         <item name="android:windowTranslucentStatus">false</item>
         <item name="android:windowDrawsSystemBarBackgrounds">true</item>
-        <item name="android:statusBarColor">@color/futuristic_black</item>
+        <item name="android:statusBarColor">@color/netsney_black</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="AppTheme.NoActionBar3" parent="@style/Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/futuristic_black</item>
-        <item name="android:windowBackground">@color/futuristic_black</item>
-        <item name="android:statusBarColor">@color/futuristic_black</item>
-        <item name="android:navigationBarColor">@color/futuristic_black</item>
+        <item name="android:colorBackground">@color/netsney_black</item>
+        <item name="android:windowBackground">@color/netsney_black</item>
+        <item name="android:statusBarColor">@color/netsney_black</item>
+        <item name="android:navigationBarColor">@color/netsney_black</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>

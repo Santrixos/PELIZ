@@ -1,26 +1,64 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    android:orientation="vertical"
-    android:id="@id/ll_row"
-    android:focusable="true"
+<androidx.cardview.widget.CardView
+    android:id="@id/cv_movie_card"
+    android:layout_width="140dp"
+    android:layout_height="200dp"
+    android:layout_margin="8dp"
     android:clickable="true"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:foreground="@drawable/selectable_draw"
+    android:focusable="true"
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:lv="http://schemas.android.com/apk/res-auto">
-    <ImageView
-        android:id="@id/iv_prueba"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    
+    <RelativeLayout
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
-        android:scaleType="centerCrop" />
-    <com.flyco.labelview.LabelView
-        android:layout_gravity="right"
-        android:id="@id/lv_row"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        lv:lv_background_color="#ffff8000"
-        lv:lv_gravity="TOP_RIGHT"
-        lv:lv_text="CAM"
-        lv:lv_text_size="12.0sp" />
-</FrameLayout>
+        android:background="@color/netsney_black">
+        
+        <ImageView
+            android:id="@id/iv_prueba"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true" />
+            
+        <!-- Quality Badge -->
+        <TextView
+            android:id="@id/tv_quality_badge"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="4dp"
+            android:background="@color/netsney_red"
+            android:text="HD"
+            android:textColor="@color/netsney_white"
+            android:textSize="10sp"
+            android:textStyle="bold"
+            android:paddingLeft="6dp"
+            android:paddingTop="2dp"
+            android:paddingRight="6dp"
+            android:paddingBottom="2dp" />
+            
+        <!-- Gradient Overlay for Text -->
+        <View
+            android:layout_width="fill_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/gradient_black_overlay" />
+            
+        <!-- Movie/Series Title -->
+        <TextView
+            android:id="@id/tv_title"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_margin="8dp"
+            android:textColor="@color/netsney_white"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:maxLines="2"
+            android:ellipsize="end" />
+            
+    </RelativeLayout>
+    
+</androidx.cardview.widget.CardView>

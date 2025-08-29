@@ -7,7 +7,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <com.google.android.material.appbar.AppBarLayout
         android:theme="@style/AppTheme.AppBarOverlay"
-        android:background="@color/futuristic_dark"
+        android:background="@color/netsney_black"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
         app:elevation="0.0dip">
@@ -27,9 +27,9 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             app:layout_scrollFlags="enterAlways|scroll"
-            app:tabIndicatorColor="@color/neon_blue"
-            app:tabSelectedTextColor="@color/neon_blue"
-            app:tabTextColor="@android:color/white"
-            android:background="@color/futuristic_black" />
+            app:tabIndicatorColor="@color/netsney_red"
+            app:tabSelectedTextColor="@color/netsney_red"
+            app:tabTextColor="@color/netsney_white"
+            android:background="@color/netsney_black" />
     </com.google.android.material.appbar.AppBarLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

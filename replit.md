@@ -1,8 +1,19 @@
 # Overview
 
-This repository contains the decompiled source files of a mobile application called "FLIMAPP" (version 4.4.7). The application appears to be an Android app that has been reverse-engineered using APKTool, as evidenced by the apktool.json configuration file and the overall directory structure typical of decompiled APK files.
+This repository contains the decompiled source files of a mobile application originally called "FLIMAPP" (version 4.4.7), now redesigned as "NETSNEY". The application has been transformed with a modern Netflix/Disney+ inspired interface using a sleek black, red, and white color scheme.
 
-The app integrates multiple third-party services including Firebase, Google Play Services, AppLovin advertising SDK, and Unity Ads. It also includes HTML parsing capabilities through JSoup and JavaScript execution via Mozilla Rhino. The presence of Lottie animation files suggests rich UI animations, while the various consent flow configurations indicate compliance with privacy regulations like GDPR.
+The app has been redesigned with 3D cards and swipeable carousels, providing a modern streaming service aesthetic. The original Android app structure has been maintained while completely overhauling the visual design and user interface elements.
+
+# Recent Changes (Latest Session)
+
+## NETSNEY Redesign (August 29, 2025)
+- **Complete UI Transformation**: Redesigned the app from FLIMAPP to NETSNEY with Netflix/Disney+ inspired interface
+- **Color Scheme Update**: Implemented black (#000000), red (#E50914), and white (#FFFFFF) color palette
+- **Modern Card Design**: Created 3D movie/series cards with rounded corners and gradient overlays
+- **Carousel Implementation**: Added horizontal scrolling carousels without navigation buttons
+- **Hero Sections**: Implemented featured content areas for both movies and series
+- **Layout Modernization**: Updated all major layouts (activity_main, fragments, app_bar) with new design system
+- **Brand Identity**: Changed app name from "Film App" to "NETSNEY" throughout the application
 
 # User Preferences
 

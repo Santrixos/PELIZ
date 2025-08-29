@@ -1,16 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
+<ScrollView
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
+    android:background="@color/netsney_black"
     xmlns:android="http://schemas.android.com/apk/res/android">
-    <com.digitalproshare.filmapp.tools.AutofitRecyclerView
-        android:id="@id/rv_peliculas"
-        android:nextFocusUp="@id/tabs"
+    
+    <LinearLayout
         android:layout_width="fill_parent"
-        android:layout_height="fill_parent"
-        android:columnWidth="100.0dip" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <!-- Featured Movie Section -->
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="300dp"
+            android:background="@color/netsney_black">
+            
+            <ImageView
+                android:id="@+id/iv_featured_movie"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:scaleType="centerCrop"
+                android:alpha="0.7" />
+            
+            <TextView
+                android:id="@+id/tv_featured_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="NETSNEY"
+                android:textColor="@color/netsney_white"
+                android:textSize="36sp"
+                android:textStyle="bold"
+                android:shadowColor="@color/netsney_black"
+                android:shadowRadius="10" />
+                
+        </RelativeLayout>
+        
+        <!-- Carousel Sections Container -->
+        <LinearLayout
+            android:id="@+id/ll_carousels"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingTop="16dp" />
+        
+        <!-- Original RecyclerView (hidden by default) -->
+        <com.digitalproshare.filmapp.tools.AutofitRecyclerView
+            android:id="@id/rv_peliculas"
+            android:nextFocusUp="@id/tabs"
+            android:layout_width="fill_parent"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            android:columnWidth="100.0dip" />
     <TextView
-        android:textColor="#ffffffff"
+        android:textColor="@color/netsney_white"
         android:id="@id/tv_cargando_peliculas"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -18,7 +62,7 @@
         android:layout_centerInParent="true" />
     <TextView
         android:textStyle="bold"
-        android:textColor="#ff656565"
+        android:textColor="@color/netsney_dark_gray"
         android:gravity="center"
         android:id="@id/tv_agregar_peliculas"
         android:layout_width="fill_parent"

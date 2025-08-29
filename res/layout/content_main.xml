@@ -8,7 +8,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <androidx.viewpager.widget.ViewPager
         android:id="@id/vp_main"
-        android:background="@drawable/futuristic_gradient_bg"
+        android:background="@color/netsney_black"
         android:layout_width="fill_parent"
         android:layout_height="fill_parent" />
 </RelativeLayout>
