@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="vertical"
+        android:padding="20.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@id/tv_descarga"
+            android:paddingBottom="20.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="Descargando actualización 3.2.8" />
+        <TextView
+            android:gravity="right"
+            android:id="@id/tv_progreso"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:id="@id/progressBar"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1.0"
+            style="?android:progressBarStyleHorizontal" />
+        <TextView
+            android:textColor="@color/azul"
+            android:layout_gravity="right"
+            android:id="@id/tv_install"
+            android:focusable="true"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20.0dip"
+            android:foreground="@drawable/selectable_draw"
+            android:text="Instalar" />
+    </LinearLayout>
+</FrameLayout>

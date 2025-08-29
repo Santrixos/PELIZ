@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:orientation="vertical"
+    android:id="@id/rl_series"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <com.digitalproshare.filmapp.tools.AutofitRecyclerView
+        android:id="@id/rv_series"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:columnWidth="100.0dip" />
+    <TextView
+        android:textColor="@color/common_google_signin_btn_text_dark_default"
+        android:id="@id/tv_cargando_series"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Cargando catalogo..."
+        android:layout_centerInParent="true" />
+    <TextView
+        android:textStyle="bold"
+        android:textColor="#ff656565"
+        android:gravity="center"
+        android:id="@id/tv_agregar_series"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="180.0dip"
+        android:text="@string/agregarSeries"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+    <com.startapp.sdk.ads.banner.Banner
+        android:id="@id/startAppBanner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true" />
+</RelativeLayout>

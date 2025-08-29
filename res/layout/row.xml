@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    android:orientation="vertical"
+    android:id="@id/ll_row"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/selectable_draw"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:lv="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/iv_prueba"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" />
+    <com.flyco.labelview.LabelView
+        android:layout_gravity="right"
+        android:id="@id/lv_row"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        lv:lv_background_color="#ffff8000"
+        lv:lv_gravity="TOP_RIGHT"
+        lv:lv_text="CAM"
+        lv:lv_text_size="12.0sp" />
+</FrameLayout>

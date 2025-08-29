@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@id/cv_server"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:foreground="@drawable/selectable_draw"
+    app:cardBackgroundColor="#ff333333"
+    app:cardCornerRadius="10.0dip"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:cardMaxElevation="@dimen/cardview_default_elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@id/iv_lang"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_margin="10.0dip"
+            android:src="@drawable/ic_lat" />
+        <ImageView
+            android:id="@id/iv_favicon"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_margin="10.0dip"
+            android:src="@drawable/ic_zeus" />
+        <TextView
+            android:textSize="25.0dip"
+            android:textColor="@color/blanco"
+            android:id="@id/tv_server"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Zeus" />
+        <ImageView
+            android:id="@id/iv_recomended"
+            android:visibility="gone"
+            android:layout_width="30.0dip"
+            android:layout_height="30.0dip"
+            android:layout_margin="10.0dip"
+            android:src="@drawable/ic_recomended" />
+        <TextView
+            android:textColor="@color/blanco"
+            android:gravity="right"
+            android:id="@id/tv_enlaces"
+            android:paddingRight="10.0dip"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:text="5 enlaces" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

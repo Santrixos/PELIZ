@@ -1,0 +1,80 @@
+.class Lokhttp3/RequestBody$1;
+.super Lokhttp3/RequestBody;
+.source "SourceFile"
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lokhttp3/RequestBody;->create(Lokhttp3/MediaType;Lh/f;)Lokhttp3/RequestBody;
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+
+# instance fields
+.field final synthetic val$content:Lh/f;
+
+.field final synthetic val$contentType:Lokhttp3/MediaType;
+
+
+# direct methods
+.method constructor <init>(Lokhttp3/MediaType;Lh/f;)V
+    .locals 0
+
+    iput-object p1, p0, Lokhttp3/RequestBody$1;->val$contentType:Lokhttp3/MediaType;
+
+    iput-object p2, p0, Lokhttp3/RequestBody$1;->val$content:Lh/f;
+
+    invoke-direct {p0}, Lokhttp3/RequestBody;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public contentLength()J
+    .locals 2
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lokhttp3/RequestBody$1;->val$content:Lh/f;
+
+    invoke-virtual {v0}, Lh/f;->n()I
+
+    move-result v0
+
+    int-to-long v0, v0
+
+    return-wide v0
+.end method
+
+.method public contentType()Lokhttp3/MediaType;
+    .locals 1
+    .annotation runtime Ljavax/annotation/Nullable;
+    .end annotation
+
+    iget-object v0, p0, Lokhttp3/RequestBody$1;->val$contentType:Lokhttp3/MediaType;
+
+    return-object v0
+.end method
+
+.method public writeTo(Lh/d;)V
+    .locals 1
+    .annotation system Ldalvik/annotation/Throws;
+        value = {
+            Ljava/io/IOException;
+        }
+    .end annotation
+
+    iget-object v0, p0, Lokhttp3/RequestBody$1;->val$content:Lh/f;
+
+    invoke-interface {p1, v0}, Lh/d;->c(Lh/f;)Lh/d;
+
+    return-void
+.end method

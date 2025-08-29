@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:id="@id/cl_play"
+    android:background="@color/colorAccent"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:id="@id/iv_reproductor"
+        android:fitsSystemWindows="false"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:scaleType="centerCrop" />
+    <androidx.appcompat.widget.Toolbar
+        android:id="@id/toolbar"
+        android:fitsSystemWindows="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" />
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:textColor="@android:color/background_light"
+        android:id="@id/btn_play"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="133.0dip"
+        android:text="Reproducir"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_download"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pb_textError="Error"
+        app:pb_textProgress="Cargando" />
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:textColor="@android:color/background_light"
+        android:id="@id/btn_download"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="75.0dip"
+        android:text="Descargar"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toTopOf="@id/btn_cast"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pb_textError="Error"
+        app:pb_textProgress="Cargando" />
+    <com.dd.processbutton.iml.ActionProcessButton
+        android:textColor="@android:color/background_light"
+        android:id="@id/btn_cast"
+        android:layout_width="200.0dip"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="15.0dip"
+        android:text="Ver en TV"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:pb_textError="Error"
+        app:pb_textProgress="Cargando" />
+    <LinearLayout
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="209.0dip"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@id/iv_lang"
+                android:paddingRight="5.0dip"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip" />
+            <ImageView
+                android:id="@id/iv_favicon"
+                android:paddingLeft="5.0dip"
+                android:layout_width="28.0dip"
+                android:layout_height="28.0dip" />
+        </LinearLayout>
+        <TextView
+            android:textSize="18.0sp"
+            android:textColor="@color/azul"
+            android:id="@id/tv_siguiente"
+            android:focusable="true"
+            android:clickable="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:foreground="@drawable/selectable_draw"
+            android:text="Siguiente enlace" />
+    </LinearLayout>
+    <WebView
+        android:id="@id/wv_rep"
+        android:visibility="invisible"
+        android:layout_width="0.0dip"
+        android:layout_height="0.0dip" />
+</RelativeLayout>

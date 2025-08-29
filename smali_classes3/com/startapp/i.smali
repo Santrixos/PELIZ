@@ -1,0 +1,53 @@
+.class public final Lcom/startapp/i;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:Lcom/startapp/sdk/adsbase/adlisteners/AdDisplayListener;
+
+.field public final synthetic b:Lcom/startapp/sdk/adsbase/Ad;
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lcom/startapp/sdk/adsbase/StartAppAd;Lcom/startapp/sdk/adsbase/adlisteners/AdDisplayListener;)V
+    .locals 0
+
+    iput-object p3, p0, Lcom/startapp/i;->a:Lcom/startapp/sdk/adsbase/adlisteners/AdDisplayListener;
+
+    iput-object p2, p0, Lcom/startapp/i;->b:Lcom/startapp/sdk/adsbase/Ad;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    :try_start_0
+    iget-object v0, p0, Lcom/startapp/i;->a:Lcom/startapp/sdk/adsbase/adlisteners/AdDisplayListener;
+
+    iget-object v1, p0, Lcom/startapp/i;->b:Lcom/startapp/sdk/adsbase/Ad;
+
+    invoke-interface {v0, v1}, Lcom/startapp/sdk/adsbase/adlisteners/AdDisplayListener;->adClicked(Lcom/startapp/sdk/adsbase/Ad;)V
+    :try_end_0
+    .catchall {:try_start_0 .. :try_end_0} :catchall_0
+
+    goto :goto_0
+
+    :catchall_0
+    move-exception v0
+
+    iget-object v1, p0, Lcom/startapp/i;->a:Lcom/startapp/sdk/adsbase/adlisteners/AdDisplayListener;
+
+    invoke-static {v1, v0}, Lcom/startapp/o9;->a(Ljava/lang/Object;Ljava/lang/Throwable;)V
+
+    :goto_0
+    return-void
+.end method

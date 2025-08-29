@@ -1,0 +1,52 @@
+.class public final Lcom/startapp/t6;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Ljava/lang/Runnable;
+
+
+# instance fields
+.field public final synthetic a:I
+
+.field public final synthetic b:Lcom/startapp/sdk/ads/video/d;
+
+
+# direct methods
+.method public constructor <init>(Lcom/startapp/sdk/ads/video/d;I)V
+    .locals 0
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "()V"
+        }
+    .end annotation
+
+    iput-object p1, p0, Lcom/startapp/t6;->b:Lcom/startapp/sdk/ads/video/d;
+
+    iput p2, p0, Lcom/startapp/t6;->a:I
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final run()V
+    .locals 2
+
+    iget-object v0, p0, Lcom/startapp/t6;->b:Lcom/startapp/sdk/ads/video/d;
+
+    iget-object v0, v0, Lcom/startapp/sdk/ads/video/d;->b:Lcom/startapp/va;
+
+    if-eqz v0, :cond_0
+
+    iget v1, p0, Lcom/startapp/t6;->a:I
+
+    check-cast v0, Lcom/startapp/ta;
+
+    invoke-virtual {v0, v1}, Lcom/startapp/ta;->a(I)V
+
+    :cond_0
+    return-void
+.end method

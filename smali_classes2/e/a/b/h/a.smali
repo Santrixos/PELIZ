@@ -1,0 +1,26 @@
+.class public interface abstract Le/a/b/h/a;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Le/a/b/h/q;
+
+
+# virtual methods
+.method public abstract a(ILjava/lang/String;)V
+.end method
+
+.method public abstract a(Ljava/lang/String;)V
+.end method
+
+.method public abstract b()I
+.end method
+
+.method public abstract c()Z
+.end method
+
+.method public abstract d()V
+.end method
+
+.method public abstract e()Z
+.end method

@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <group
+        android:checkableBehavior="single">
+        <item
+            android:icon="@drawable/ic_local_movies_black_24dp"
+            android:id="@id/nav_all"
+            android:title="Todas" />
+        <item
+            android:icon="@drawable/pistola"
+            android:id="@id/nav_accion"
+            android:title="Accion" />
+        <item
+            android:icon="@drawable/ic_spa_black_24dp"
+            android:id="@id/nav_drama"
+            android:title="Drama" />
+        <item
+            android:icon="@drawable/ic_insert_emoticon_black_24dp"
+            android:id="@id/nav_comedy"
+            android:title="Comedia" />
+        <item
+            android:icon="@drawable/fantasma"
+            android:id="@id/nav_horror"
+            android:title="Horror" />
+        <item
+            android:icon="@drawable/family"
+            android:id="@id/nav_family"
+            android:title="Familiares" />
+        <item
+            android:icon="@drawable/anim"
+            android:id="@id/nav_animacion"
+            android:title="Animación" />
+        <item
+            android:icon="@drawable/favoritos"
+            android:id="@id/nav_favoritos"
+            android:title="Mi Lista" />
+        <item
+            android:icon="@drawable/ic_file_download_black_24dp"
+            android:id="@id/nav_descargas"
+            android:title="Descargas" />
+    </group>
+    <item
+        android:title="Communicate">
+        <menu>
+            <item
+                android:icon="@drawable/twitter_vector"
+                android:id="@id/nav_twit"
+                android:title="Siguenos" />
+            <item
+                android:icon="@drawable/ic_menu_share"
+                android:id="@id/nav_share"
+                android:title="Compartir" />
+            <item
+                android:icon="@drawable/ic_menu_send"
+                android:id="@id/nav_send"
+                android:title="Soporte" />
+        </menu>
+    </item>
+</menu>

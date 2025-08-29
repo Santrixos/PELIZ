@@ -1,0 +1,64 @@
+.class public final Lcom/startapp/q2;
+.super Lcom/startapp/q0;
+.source "SourceFile"
+
+
+# direct methods
+.method public constructor <init>(Landroid/content/Context;Lcom/startapp/sdk/ads/offerWall/offerWallHtml/OfferWallAd;Lcom/startapp/sdk/adsbase/model/AdPreferences;Lcom/startapp/sdk/adsbase/adlisteners/AdEventListener;)V
+    .locals 7
+
+    sget-object v5, Lcom/startapp/sdk/adsbase/model/AdPreferences$Placement;->c:Lcom/startapp/sdk/adsbase/model/AdPreferences$Placement;
+
+    const/4 v6, 0x1
+
+    move-object v0, p0
+
+    move-object v1, p1
+
+    move-object v2, p2
+
+    move-object v3, p3
+
+    move-object v4, p4
+
+    invoke-direct/range {v0 .. v6}, Lcom/startapp/q0;-><init>(Landroid/content/Context;Lcom/startapp/sdk/adsbase/Ad;Lcom/startapp/sdk/adsbase/model/AdPreferences;Lcom/startapp/sdk/adsbase/adlisteners/AdEventListener;Lcom/startapp/sdk/adsbase/model/AdPreferences$Placement;Z)V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public final a(Z)V
+    .locals 0
+
+    invoke-super {p0, p1}, Lcom/startapp/sdk/adsbase/b;->a(Z)V
+
+    invoke-virtual {p0, p1}, Lcom/startapp/q0;->c(Z)V
+
+    return-void
+.end method
+
+.method public final d()Lcom/startapp/sdk/adsbase/model/GetAdRequest;
+    .locals 2
+
+    invoke-super {p0}, Lcom/startapp/sdk/adsbase/b;->d()Lcom/startapp/sdk/adsbase/model/GetAdRequest;
+
+    move-result-object v0
+
+    if-nez v0, :cond_0
+
+    const/4 v0, 0x0
+
+    return-object v0
+
+    :cond_0
+    sget-object v1, Lcom/startapp/sdk/adsbase/AdsCommonMetaData;->h:Lcom/startapp/sdk/adsbase/AdsCommonMetaData;
+
+    invoke-virtual {v1}, Lcom/startapp/sdk/adsbase/AdsCommonMetaData;->t()I
+
+    move-result v1
+
+    iput v1, v0, Lcom/startapp/sdk/adsbase/model/GetAdRequest;->t0:I
+
+    return-object v0
+.end method

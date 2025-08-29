@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shortcuts
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <shortcut
+        android:icon="@drawable/ic_downloading"
+        android:enabled="true">
+        <intent
+            android:targetPackage="com.digitalproshare.filmapp"
+            android:action="android.intent.action.VIEW"
+            android:targetClass="com.digitalproshare.filmapp.ListDownloadsActivity" />
+        <categories
+            android:name="android.shortcut.conversation" />
+    </shortcut>
+</shortcuts>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    android:id="@id/nestedscroll"
+    android:background="#80000000"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_marginLeft="15.0dip"
+        android:layout_marginTop="5.0dip"
+        android:layout_marginRight="15.0dip"
+        android:layout_marginBottom="15.0dip">
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content">
+            <Button
+                android:textColor="@color/blanco"
+                android:id="@id/btn_trailer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Trailer"
+                android:drawableLeft="@drawable/ic_movie_black_24dp"
+                app:backgroundTint="@color/azul" />
+        </LinearLayout>
+        <TextView
+            android:textColor="@android:color/background_light"
+            android:id="@id/tv_sinopsis"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+</androidx.core.widget.NestedScrollView>

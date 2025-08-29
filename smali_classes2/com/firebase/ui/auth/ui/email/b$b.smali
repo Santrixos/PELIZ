@@ -1,0 +1,128 @@
+.class Lcom/firebase/ui/auth/ui/email/b$b;
+.super Ljava/lang/Object;
+.source "SourceFile"
+
+# interfaces
+.implements Lcom/google/android/gms/tasks/OnCompleteListener;
+
+
+# annotations
+.annotation system Ldalvik/annotation/EnclosingMethod;
+    value = Lcom/firebase/ui/auth/ui/email/b;->a(IILandroid/content/Intent;)V
+.end annotation
+
+.annotation system Ldalvik/annotation/InnerClass;
+    accessFlags = 0x0
+    name = null
+.end annotation
+
+.annotation system Ldalvik/annotation/Signature;
+    value = {
+        "Ljava/lang/Object;",
+        "Lcom/google/android/gms/tasks/OnCompleteListener<",
+        "Ljava/lang/String;",
+        ">;"
+    }
+.end annotation
+
+
+# instance fields
+.field final synthetic a:Ljava/lang/String;
+
+.field final synthetic b:Lcom/google/android/gms/auth/api/credentials/Credential;
+
+.field final synthetic c:Lcom/firebase/ui/auth/ui/email/b;
+
+
+# direct methods
+.method constructor <init>(Lcom/firebase/ui/auth/ui/email/b;Ljava/lang/String;Lcom/google/android/gms/auth/api/credentials/Credential;)V
+    .locals 0
+
+    iput-object p1, p0, Lcom/firebase/ui/auth/ui/email/b$b;->c:Lcom/firebase/ui/auth/ui/email/b;
+
+    iput-object p2, p0, Lcom/firebase/ui/auth/ui/email/b$b;->a:Ljava/lang/String;
+
+    iput-object p3, p0, Lcom/firebase/ui/auth/ui/email/b$b;->b:Lcom/google/android/gms/auth/api/credentials/Credential;
+
+    invoke-direct {p0}, Ljava/lang/Object;-><init>()V
+
+    return-void
+.end method
+
+
+# virtual methods
+.method public onComplete(Lcom/google/android/gms/tasks/Task;)V
+    .locals 4
+    .annotation system Ldalvik/annotation/Signature;
+        value = {
+            "(",
+            "Lcom/google/android/gms/tasks/Task<",
+            "Ljava/lang/String;",
+            ">;)V"
+        }
+    .end annotation
+
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->isSuccessful()Z
+
+    move-result v0
+
+    if-eqz v0, :cond_0
+
+    iget-object v0, p0, Lcom/firebase/ui/auth/ui/email/b$b;->c:Lcom/firebase/ui/auth/ui/email/b;
+
+    new-instance v1, Lcom/firebase/ui/auth/q/a/k$b;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getResult()Ljava/lang/Object;
+
+    move-result-object v2
+
+    check-cast v2, Ljava/lang/String;
+
+    iget-object v3, p0, Lcom/firebase/ui/auth/ui/email/b$b;->a:Ljava/lang/String;
+
+    invoke-direct {v1, v2, v3}, Lcom/firebase/ui/auth/q/a/k$b;-><init>(Ljava/lang/String;Ljava/lang/String;)V
+
+    iget-object v2, p0, Lcom/firebase/ui/auth/ui/email/b$b;->b:Lcom/google/android/gms/auth/api/credentials/Credential;
+
+    invoke-virtual {v2}, Lcom/google/android/gms/auth/api/credentials/Credential;->t()Ljava/lang/String;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/firebase/ui/auth/q/a/k$b;->a(Ljava/lang/String;)Lcom/firebase/ui/auth/q/a/k$b;
+
+    iget-object v2, p0, Lcom/firebase/ui/auth/ui/email/b$b;->b:Lcom/google/android/gms/auth/api/credentials/Credential;
+
+    invoke-virtual {v2}, Lcom/google/android/gms/auth/api/credentials/Credential;->v()Landroid/net/Uri;
+
+    move-result-object v2
+
+    invoke-virtual {v1, v2}, Lcom/firebase/ui/auth/q/a/k$b;->a(Landroid/net/Uri;)Lcom/firebase/ui/auth/q/a/k$b;
+
+    invoke-virtual {v1}, Lcom/firebase/ui/auth/q/a/k$b;->a()Lcom/firebase/ui/auth/q/a/k;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/firebase/ui/auth/q/a/i;->a(Ljava/lang/Object;)Lcom/firebase/ui/auth/q/a/i;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/firebase/ui/auth/ui/email/b;->c(Lcom/firebase/ui/auth/ui/email/b;Ljava/lang/Object;)V
+
+    goto :goto_0
+
+    :cond_0
+    iget-object v0, p0, Lcom/firebase/ui/auth/ui/email/b$b;->c:Lcom/firebase/ui/auth/ui/email/b;
+
+    invoke-virtual {p1}, Lcom/google/android/gms/tasks/Task;->getException()Ljava/lang/Exception;
+
+    move-result-object v1
+
+    invoke-static {v1}, Lcom/firebase/ui/auth/q/a/i;->a(Ljava/lang/Exception;)Lcom/firebase/ui/auth/q/a/i;
+
+    move-result-object v1
+
+    invoke-static {v0, v1}, Lcom/firebase/ui/auth/ui/email/b;->d(Lcom/firebase/ui/auth/ui/email/b;Ljava/lang/Object;)V
+
+    :goto_0
+    return-void
+.end method

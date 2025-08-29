@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    android:id="@id/cv_file"
+    android:focusable="true"
+    android:clickable="true"
+    android:layout_width="fill_parent"
+    android:layout_height="100.0dip"
+    android:foreground="?selectableItemBackground"
+    app:cardBackgroundColor="#3b424242"
+    app:cardCornerRadius="@dimen/cardview_default_radius"
+    app:cardElevation="@dimen/cardview_default_elevation"
+    app:cardPreventCornerOverlap="true"
+    app:cardUseCompatPadding="true"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <LinearLayout
+        android:gravity="center_vertical"
+        android:orientation="horizontal"
+        android:padding="5.0dip"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent">
+        <ImageView
+            android:id="@id/iv_preview"
+            android:layout_width="100.0dip"
+            android:layout_height="80.0dip"
+            android:scaleType="centerCrop"
+            app:srcCompat="@drawable/placeholder_movie" />
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+            <LinearLayout
+                android:gravity="center_vertical"
+                android:orientation="vertical"
+                android:paddingLeft="5.0dip"
+                android:layout_width="fill_parent"
+                android:layout_height="fill_parent"
+                android:layout_weight="1.0">
+                <TextView
+                    android:textColor="@color/cardview_light_background"
+                    android:id="@id/tv_titulo"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@id/tv_duracion"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+                <TextView
+                    android:id="@id/tv_peso"
+                    android:layout_width="fill_parent"
+                    android:layout_height="wrap_content" />
+            </LinearLayout>
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:layout_gravity="right"
+                    android:id="@id/iv_options"
+                    android:padding="6.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_options_24dp" />
+                <ImageView
+                    android:layout_gravity="right"
+                    android:id="@id/iv_storage"
+                    android:padding="6.0dip"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    app:srcCompat="@drawable/ic_phone_android_black_24dp" />
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView
+            android:layout_width="24.0dip"
+            android:layout_height="24.0dip"
+            app:srcCompat="@drawable/ic_delete_black_24dp" />
+    </LinearLayout>
+</androidx.cardview.widget.CardView>

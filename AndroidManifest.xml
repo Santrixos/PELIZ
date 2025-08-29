@@ -1,0 +1,599 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest
+    android:compileSdkVersion="34"
+    android:compileSdkVersionCodename="14"
+    package="com.digitalproshare.filmapp"
+    platformBuildVersionCode="34"
+    platformBuildVersionName="14"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <uses-feature
+        android:name="android.software.leanback"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.touchscreen"
+        android:required="false" />
+    <!-- Permite que la aplicación cree sockets de red y utilice protocolos de red personalizados. El navegador y otras aplicaciones proporcionan los medios necesarios para el envío de datos a Internet, por lo que no hace falta utilizar este permiso para eso. -->
+    <uses-permission
+        android:name="android.permission.INTERNET" />
+    <!-- Permite que la aplicación escriba en el contenido del almacenamiento compartido. -->
+    <uses-permission
+        android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Permite que la aplicación lea el contenido del almacenamiento compartido. -->
+    <uses-permission
+        android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <!-- Permite que la aplicación vea información sobre las conexiones de red (por ejemplo, qué redes existen y están conectadas). -->
+    <uses-permission
+        android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Permite que la aplicación use servicios en primer plano. -->
+    <uses-permission
+        android:name="android.permission.FOREGROUND_SERVICE" />
+    <!-- Permite que la aplicación controle la vibración. -->
+    <uses-permission
+        android:name="android.permission.VIBRATE" />
+    <!-- Permite que una aplicación solicite la instalación de paquetes. -->
+    <uses-permission
+        android:name="android.permission.REQUEST_INSTALL_PACKAGES" />
+    <!-- Mientras la usas, esta aplicación puede obtener tu ubicación aproximada mediante los Servicios de ubicación, siempre y cuando el dispositivo los tenga activados. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <!-- Mientras la usas, esta aplicación puede obtener tu ubicación exacta mediante los Servicios de ubicación, siempre y cuando el dispositivo los tenga activados. Es posible que esto consuma más batería. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <!-- Permite que la aplicación se inicie en cuanto el sistema haya finalizado la inicialización. Esto puede ocasionar que el dispositivo tarde más en inicializarse y que la aplicación ralentice el funcionamiento general del dispositivo al estar en ejecución constante. -->
+    <uses-permission
+        android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <!-- Permite que la aplicación vea la configuración de Bluetooth del dispositivo y que cree y acepte conexiones con los dispositivos sincronizados. -->
+    <uses-permission
+        android:name="android.permission.BLUETOOTH" />
+    <!-- Permite que la aplicación vea información sobre la conexión a redes Wi-Fi, por ejemplo, si la conexión Wi-Fi está activada y cuál es el nombre de los dispositivos Wi-Fi conectados. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_WIFI_STATE" />
+    <!-- Permite que la app de un publicador acceda a un ID de publicidad válido directa o indirectamente. -->
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID" />
+    <!-- Permite que la app obtenga información sobre la referencia de instalación. -->
+    <uses-permission
+        android:name="com.google.android.finsky.permission.BIND_GET_INSTALL_REFERRER_SERVICE" />
+    <!-- Permite que una aplicación acceda a la API de AdServices Topics. -->
+    <uses-permission
+        android:name="android.permission.ACCESS_ADSERVICES_TOPICS" />
+    <queries>
+        <intent>
+            <action
+                android:name="android.intent.action.MAIN" />
+        </intent>
+    </queries>
+    <queries>
+        <intent>
+            <action
+                android:name="com.applovin.am.intent.action.APPHUB_SERVICE" />
+        </intent>
+    </queries>
+    <uses-permission
+        android:name="com.applovin.array.apphub.permission.BIND_APPHUB_SERVICE" />
+    <!-- Permite que la aplicación evite que el dispositivo entre en estado de inactividad. -->
+    <uses-permission
+        android:name="android.permission.WAKE_LOCK" />
+    <!-- Permite que las aplicaciones acepten mensajes de la nube al dispositivo enviados por el servicio de la aplicación. El uso de este servicio implica el uso de datos y las aplicaciones malintencionadas pueden utilizar este permiso para transmitir datos de forma excesiva. -->
+    <uses-permission
+        android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <application
+        android:theme="@style/AppTheme"
+        android:label="@string/app_name"
+        android:icon="@mipmap/ic_launcher"
+        android:name="com.digitalproshare.filmapp.App"
+        android:debuggable="true"
+        android:allowBackup="true"
+        android:hardwareAccelerated="true"
+        android:largeHeap="true"
+        android:supportsRtl="true"
+        android:usesCleartextTraffic="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+        android:requestLegacyExternalStorage="true">
+        <meta-data
+            android:name="com.startapp.sdk.APPLICATION_ID"
+            android:value="204264538" />
+        <activity
+            android:theme="@style/AppTheme.Transparent"
+            android:name="com.digitalproshare.filmapp.UpdateActivity"
+            android:configChanges="orientation|screenSize" />
+        <receiver
+            android:name="com.digitalproshare.filmapp.tools.UpdateClass$DownloadBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.DOWNLOAD_COMPLETE" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.GetSeriesActiity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.GetEnlacesActivity"
+            android:configChanges="orientation|screenSize" />
+        <meta-data
+            android:name="com.google.firebase.messaging.default_notification_icon"
+            android:resource="@drawable/ic_stat_name" />
+        <service
+            android:name="com.digitalproshare.filmapp.notificaciones.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="com.digitalproshare.filmapp.tools.DownloadService" />
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/filepaths" />
+        </provider>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.digitalproshare.filmapp.ModifiedActicivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.SplashActivity"
+            android:configChanges="orientation|screenSize"
+            android:banner="@mipmap/ic_launcher_foreground">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.MAIN" />
+                <category
+                    android:name="android.intent.category.LEANBACK_LAUNCHER" />
+            </intent-filter>
+            <meta-data
+                android:name="android.app.shortcuts"
+                android:resource="@xml/shortcuts" />
+        </activity>
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/app_name"
+            android:name="com.digitalproshare.filmapp.MainActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.Bypass"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.BypassSeries"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_activity_sinopsis"
+            android:name="com.digitalproshare.filmapp.Sinopsis" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:label="@string/title_activity_sinopsis_serie"
+            android:name="com.digitalproshare.filmapp.SinopsisSerie"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.ListDownloadsActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.digitalproshare.filmapp.PlayerActivity"
+            android:screenOrientation="sensorLandscape"
+            android:configChanges="navigation|orientation|screenLayout|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:label="Ajustes"
+            android:name="com.digitalproshare.filmapp.SettingsActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar"
+            android:name="com.digitalproshare.filmapp.LocalPlayerActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.ActionActivity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBar3"
+            android:name="com.digitalproshare.filmapp.Action2Activity"
+            android:configChanges="orientation|screenSize" />
+        <activity
+            android:theme="@style/AppTheme.NoActionBarMedia"
+            android:name="com.digitalproshare.filmapp.MediaActivity"
+            android:screenOrientation="landscape"
+            android:configChanges="keyboardHidden|orientation|screenSize" />
+        <provider
+            android:name="com.startapp.sdk.adsbase.StartAppInitProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp.startappinitprovider" />
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.startapp.sdk.adsbase.consent.ConsentActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:theme="@android:style/Theme"
+            android:name="com.startapp.sdk.ads.list3d.List3DActivity" />
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.startapp.sdk.adsbase.activities.OverlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:theme="@android:style/Theme"
+            android:name="com.startapp.sdk.adsbase.activities.FullScreenActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" />
+        <service
+            android:name="com.startapp.sdk.adsbase.InfoEventService" />
+        <service
+            android:name="com.startapp.sdk.adsbase.PeriodicJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <receiver
+            android:name="com.startapp.sdk.adsbase.remoteconfig.BootCompleteListener"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.BOOT_COMPLETED" />
+            </intent-filter>
+        </receiver>
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.unity3d.services.ads.adunit.AdUnitActivity"
+            android:exported="false"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentActivity"
+            android:exported="false"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar.Fullscreen"
+            android:name="com.unity3d.services.ads.adunit.AdUnitTransparentSoftwareActivity"
+            android:exported="false"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+            android:hardwareAccelerated="false" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.unity3d.services.ads.adunit.AdUnitSoftwareActivity"
+            android:exported="false"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|mcc|mnc|navigation|orientation|screenLayout|screenSize|smallestScreenSize|touchscreen|uiMode"
+            android:hardwareAccelerated="false" />
+        <provider
+            android:name="androidx.startup.InitializationProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp.androidx-startup">
+            <meta-data
+                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="com.unity3d.services.core.configuration.AdsSdkInitializer"
+                android:value="androidx.startup" />
+            <meta-data
+                android:name="com.unity3d.services.identifiers.UnitySharedLibraryInitializer"
+                android:value="androidx.startup" />
+        </provider>
+        <activity
+            android:theme="@android:style/Theme.Translucent"
+            android:name="com.startapp.sdk.ads.interstitials.OverlayActivity"
+            android:configChanges="keyboardHidden|orientation|screenLayout|screenSize" />
+        <service
+            android:name="com.startapp.sdk.cachedservice.BackgroundService" />
+        <service
+            android:name="com.startapp.sdk.jobs.SchedulerService"
+            android:permission="android.permission.BIND_JOB_SERVICE" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.facebook.sdk.ApplicationId"
+            android:value="@string/facebook_application_id" />
+        <activity
+            android:theme="@style/FirebaseUI.Transparent"
+            android:label=""
+            android:name="com.firebase.ui.auth.KickoffActivity"
+            android:exported="false" />
+        <activity
+            android:theme="@style/FirebaseUI.Transparent"
+            android:label=""
+            android:name="com.firebase.ui.auth.ui.idp.SingleSignInActivity"
+            android:exported="false" />
+        <activity
+            android:theme="@style/FirebaseUI.Transparent"
+            android:label=""
+            android:name="com.firebase.ui.auth.ui.credentials.CredentialSaveActivity"
+            android:exported="false" />
+        <activity
+            android:theme="@style/FirebaseUI.Transparent"
+            android:label=""
+            android:name="com.firebase.ui.auth.ui.provider.GitHubLoginActivity"
+            android:launchMode="singleTop"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize">
+            <intent-filter
+                android:autoVerify="true">
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="https"
+                    android:host="@string/firebase_web_host"
+                    android:path="/__/auth/handler" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:label="@string/fui_title_recover_password_activity"
+            android:name="com.firebase.ui.auth.ui.email.RecoverPasswordActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:label="@string/fui_sign_in_default"
+            android:name="com.firebase.ui.auth.ui.email.EmailActivity"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:label="@string/fui_sign_in_with_phone_number"
+            android:name="com.firebase.ui.auth.ui.phone.PhoneActivity"
+            android:exported="false"
+            android:windowSoftInputMode="stateAlwaysVisible|adjustResize" />
+        <activity
+            android:label="@string/fui_title_welcome_back_idp_prompt"
+            android:name="com.firebase.ui.auth.ui.idp.WelcomeBackIdpPrompt"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:label="@string/fui_title_welcome_back_password_prompt"
+            android:name="com.firebase.ui.auth.ui.email.WelcomeBackPasswordPrompt"
+            android:exported="false"
+            android:windowSoftInputMode="adjustResize" />
+        <activity
+            android:label="@string/fui_default_toolbar_title"
+            android:name="com.firebase.ui.auth.ui.idp.AuthMethodPickerActivity"
+            android:exported="false" />
+        <activity
+            android:label="@string/app_name"
+            android:name="com.facebook.FacebookActivity"
+            android:configChanges="keyboard|keyboardHidden|orientation|screenLayout|screenSize" />
+        <activity
+            android:name="com.facebook.CustomTabActivity"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="android.intent.action.VIEW" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+                <category
+                    android:name="android.intent.category.BROWSABLE" />
+                <data
+                    android:scheme="fbYOUR_APP_ID" />
+            </intent-filter>
+        </activity>
+        <provider
+            android:name="com.firebase.ui.auth.data.client.AuthUiInitProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp.authuiinitprovider"
+            android:initOrder="90" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.firebase.auth.internal.FederatedSignInActivity"
+            android:permission="com.google.firebase.auth.api.gms.permission.LAUNCH_FEDERATED_SIGN_IN"
+            android:exported="true"
+            android:excludeFromRecents="true"
+            android:launchMode="singleTask" />
+        <service
+            android:name="com.google.firebase.components.ComponentDiscoveryService"
+            android:exported="false"
+            android:directBootAware="true">
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.remoteconfig.RemoteConfigRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.storage.StorageRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.analytics.connector.internal.AnalyticsConnectorRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.iid.Registrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+            <meta-data
+                android:name="com.google.firebase.components:com.google.firebase.abt.component.AbtRegistrar"
+                android:value="com.google.firebase.components.ComponentRegistrar" />
+        </service>
+        <provider
+            android:name="com.squareup.picasso.PicassoProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp.com.squareup.picasso" />
+        <service
+            android:name="com.google.firebase.messaging.FirebaseMessagingService"
+            android:exported="false">
+            <intent-filter
+                android:priority="-500">
+                <action
+                    android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <provider
+            android:name="com.applovin.sdk.AppLovinInitProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp.applovininitprovider"
+            android:initOrder="101" />
+        <activity
+            android:name="com.applovin.adview.AppLovinFullscreenActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.applovin.adview.AppLovinFullscreenThemedActivity"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode"
+            android:hardwareAccelerated="true" />
+        <activity
+            android:name="com.applovin.sdk.AppLovinWebViewActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.applovin.mediation.hybridAds.MaxHybridMRecAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@android:style/Theme.NoTitleBar.Fullscreen"
+            android:name="com.applovin.mediation.hybridAds.MaxHybridNativeAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerDetailActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerMultiAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitsListActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitWaterfallsListActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerAdUnitDetailActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerCmpNetworksListActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTcfConsentStatusesListActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTcfInfoListActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTcfStringActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTestLiveNetworkActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerTestModeNetworkActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.mediation.MaxDebuggerActivity.Theme"
+            android:name="com.applovin.mediation.MaxDebuggerWaterfallKeywordsActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme"
+            android:name="com.applovin.creative.MaxCreativeDebuggerActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <activity
+            android:theme="@style/com.applovin.creative.CreativeDebuggerActivity.Theme"
+            android:name="com.applovin.creative.MaxCreativeDebuggerDisplayedAdActivity"
+            android:configChanges="fontScale|keyboard|keyboardHidden|locale|orientation|screenLayout|screenSize|smallestScreenSize|uiMode" />
+        <service
+            android:name="com.applovin.impl.adview.activity.FullscreenAdService"
+            android:exported="false"
+            android:stopWithTask="false" />
+        <receiver
+            android:name="com.tonyodev.fetch2.FetchNotificationBroadcastReceiver"
+            android:enabled="true"
+            android:exported="false">
+            <intent-filter>
+                <action
+                    android:name="com.tonyodev.fetch2.action.NOTIFICATION_ACTION" />
+                <action
+                    android:name="com.tonyodev.fetch2.action.NOTIFICATION_CHECK" />
+                <category
+                    android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.firebase.iid.FirebaseInstanceIdReceiver"
+            android:permission="com.google.android.c2dm.permission.SEND"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.google.android.c2dm.intent.RECEIVE" />
+            </intent-filter>
+        </receiver>
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementReceiver"
+            android:enabled="true"
+            android:exported="false" />
+        <receiver
+            android:name="com.google.android.gms.measurement.AppMeasurementInstallReferrerReceiver"
+            android:permission="android.permission.INSTALL_PACKAGES"
+            android:enabled="true"
+            android:exported="true">
+            <intent-filter>
+                <action
+                    android:name="com.android.vending.INSTALL_REFERRER" />
+            </intent-filter>
+        </receiver>
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementService"
+            android:enabled="true"
+            android:exported="false" />
+        <service
+            android:name="com.google.android.gms.measurement.AppMeasurementJobService"
+            android:permission="android.permission.BIND_JOB_SERVICE"
+            android:enabled="true"
+            android:exported="false" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+            android:exported="false"
+            android:excludeFromRecents="true" />
+        <service
+            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+            android:exported="true" />
+        <activity
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+            android:exported="false" />
+        <provider
+            android:name="com.google.firebase.provider.FirebaseInitProvider"
+            android:exported="false"
+            android:authorities="com.digitalproshare.filmapp.firebaseinitprovider"
+            android:initOrder="100" />
+        <activity
+            android:theme="@style/Theme.AppCompat"
+            android:name="com.tapadoo.alerter.MockActivity" />
+    </application>
+</manifest>

@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:orientation="vertical"
+    android:padding="10.0dip"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+    <LinearLayout
+        android:orientation="horizontal"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_gravity="center"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Titulo: " />
+        <EditText
+            android:id="@id/et_titulo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+    <TextView
+        android:textColor="@color/azul"
+        android:layout_gravity="right"
+        android:id="@id/tv_descargar"
+        android:padding="10.0dip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Descargar" />
+</LinearLayout>

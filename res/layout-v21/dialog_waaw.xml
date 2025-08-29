@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:gravity="center"
+    android:orientation="vertical"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:textColor="@color/blanco"
+        android:gravity="center"
+        android:id="@id/cb_waaw"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Acontinuación aparecerán los enlaces disponibles para este contenido" />
+    <ImageView
+        android:id="@id/iv_waaw"
+        android:layout_width="300.0dip"
+        android:layout_height="200.0dip"
+        android:src="@drawable/server"
+        android:scaleType="fitCenter" />
+    <Button
+        android:textColor="@color/blanco"
+        android:id="@id/btn_aceptar"
+        android:focusable="true"
+        android:clickable="true"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:text="Aceptar"
+        android:backgroundTint="@color/azul" />
+</LinearLayout>
