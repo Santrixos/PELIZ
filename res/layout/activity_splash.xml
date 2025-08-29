@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout
     android:orientation="vertical"
-    android:background="#ff000000"
+    android:background="@color/futuristic_black"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -27,7 +27,7 @@
             android:layout_marginBottom="10.0dip"
             android:text="Ocurrio un error de red" />
         <TextView
-            android:textColor="@color/azul"
+            android:textColor="@color/neon_blue"
             android:gravity="center"
             android:id="@id/tv_reintentar"
             android:paddingBottom="10.0dip"
@@ -39,7 +39,7 @@
         <Button
             android:layout_gravity="center"
             android:id="@id/btn_descargas"
-            android:background="@color/azul"
+            android:background="@drawable/futuristic_button_bg"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_margin="10.0dip"

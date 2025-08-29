@@ -193,20 +193,30 @@
         <item name="android:textColor">@color/al_exo_white_opacity_70</item>
         <item name="android:text">·</item>
     </style>
-    <style name="AppTheme" parent="@style/Theme.AppCompat.Light.DarkActionBar">
-        <item name="colorAccent">@color/colorAccent</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+    <style name="AppTheme" parent="@style/Theme.AppCompat.NoActionBar">
+        <item name="colorAccent">@color/neon_red</item>
+        <item name="colorPrimary">@color/neon_blue</item>
+        <item name="colorPrimaryDark">@color/futuristic_black</item>
+        <item name="android:windowBackground">@color/futuristic_black</item>
+        <item name="android:statusBarColor">@color/futuristic_black</item>
+        <item name="android:navigationBarColor">@color/futuristic_black</item>
+        <item name="android:textColorPrimary">@android:color/white</item>
+        <item name="android:textColorSecondary">@color/neon_blue</item>
     </style>
     <style name="AppTheme.AppBarOverlay" parent="@style/ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="AppTheme.NoActionBar" parent="@style/AppTheme">
-        <item name="android:colorBackground">@color/colorAccent</item>
-        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:colorBackground">@color/futuristic_black</item>
+        <item name="android:windowTranslucentStatus">false</item>
+        <item name="android:windowDrawsSystemBarBackgrounds">true</item>
+        <item name="android:statusBarColor">@color/futuristic_black</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
     <style name="AppTheme.NoActionBar3" parent="@style/Theme.AppCompat.NoActionBar">
-        <item name="android:colorBackground">@color/colorAccent</item>
+        <item name="android:colorBackground">@color/futuristic_black</item>
+        <item name="android:windowBackground">@color/futuristic_black</item>
+        <item name="android:statusBarColor">@color/futuristic_black</item>
+        <item name="android:navigationBarColor">@color/futuristic_black</item>
         <item name="windowActionBar">false</item>
         <item name="windowNoTitle">true</item>
     </style>
